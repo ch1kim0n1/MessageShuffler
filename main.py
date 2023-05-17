@@ -12,6 +12,8 @@ def get_ids_and_messages(filename):
 
     return ids_and_messages
 
+# ---------------------------------------------TEMPLATE USED----------------------------------------------------
+
 def send_message(anilist_id, message):
     api_url = "https://graphql.anilist.co"
 
@@ -43,6 +45,8 @@ def send_message(anilist_id, message):
         print(f"Message sent to user {saved_message['id']}: {saved_message['message']}")
     else:
         print("Failed to send message.")
+        
+#--------------------------------------------------------------------------------------------------------------------
 
 def send_random_message(ids_and_messages, messages_sent):
     remaining_messages = [message for id, message in ids_and_messages if message not in messages_sent]
